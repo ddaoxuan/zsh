@@ -109,3 +109,7 @@ alias ls="ls -p -G"
 alias la="ls -A"
 alias ll="ls -l"
 alias lla="ll -A"
+
+# Run tmux on startup
+if [ "$TMUX" = "" ]; then tmux; fi
+
