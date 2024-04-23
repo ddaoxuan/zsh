@@ -1,9 +1,21 @@
+# Minimalistic zsh config
+
+This is my basic config for working in shell with minimal aliases, and plugins, consists of:
+
+- autocompletion
+- syntax-highlighting
+- fzf
+
 ## Prerequisites
 
 - oh-my-zsh
 - zsh
 
-Set source `~/.zshrc` to `source ~/.config/zsh`
+## Setup
+
+- Clone this repo to `~/.config/zsh`
+- Get all plugins locally (fzf via brew, rest can be via git clone)
+- Set source in `~/.zshrc` to `source ~/.config/zsh`
 
 ## Plugins
 
