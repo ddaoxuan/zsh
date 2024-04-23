@@ -9,10 +9,15 @@ Set source `~/.zshrc` to `source ~/.config/zsh`
 
 To install plugins, they need to be pulled locally first, and then extended in `~/.config/.zshrc` plugins
 
-### Example
+### Example install
 
-- git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions
+```sh
+git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions
+
 - edit ~/.config/.zshrc plugins property to include `plugins=(git zsh-autosuggestions)`
+```
+
+### Plugins list
 
 - fzf - can be installed via `brew` `brew install fzf`
 - (zsh-syntax-highlighting)[https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting]
