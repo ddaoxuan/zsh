@@ -70,7 +70,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git z zsh-syntax-highlighting fzf)
+plugins=(git z zsh-syntax-highlighting fast-syntax-highlighting zsh-autosuggestions fzf)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -102,7 +102,9 @@ source $ZSH/oh-my-zsh.sh
 
 alias gs="git switch"
 alias ga="git add"
+alias gbd="git branch -d"
 alias gc="git commit -m"
+alias gpull="git pull"
 alias gpusho="git push origin --set-upstream"
 alias gpush="git push"
 alias ls="ls -p -G"
