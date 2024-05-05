@@ -70,7 +70,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git z zsh-syntax-highlighting fast-syntax-highlighting zsh-autosuggestions fzf)
+plugins=(git z zsh-syntax-highlighting fast-syntax-highlighting zsh-autosuggestions fzf zsh-nvm)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -95,6 +95,14 @@ source $ZSH/oh-my-zsh.sh
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
+#
+#
+# Bindings
+#
+# Jump words backwards forward in fish/bash like style
+bindkey "^[[1;3C" forward-word
+bindkey "^[[1;3D" backward-word
+
 #
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
