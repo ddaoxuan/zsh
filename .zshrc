@@ -4,6 +4,13 @@
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
+# bun completions
+[ -s "/Users/ddaoxuan/.bun/_bun" ] && source "/Users/ddaoxuan/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -119,6 +126,9 @@ alias ls="ls -p -G"
 alias la="ls -A"
 alias ll="ls -l"
 alias lla="ll -A"
+
+
+alias yeet="git add . && git commit -m 'wip' -n && git push --no-verify"
 
 # Run tmux on startup
 if [ "$TMUX" = "" ]; then tmux; fi
