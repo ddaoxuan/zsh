@@ -130,3 +130,4 @@ alias yeet="git add . && git commit -m 'wip' -n && git push --no-verify"
 # Run tmux on startup
 if [ "$TMUX" = "" ]; then tmux; fi
 
+source ~/fzf-git.sh/fzf-git.sh

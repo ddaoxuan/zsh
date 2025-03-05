@@ -1,6 +1,6 @@
 # Minimalistic zsh config
 
-This is my basic config for working in shell with minimal aliases, and plugins, consists of:
+Basic config for working in shell with minimal aliases, and plugins, contains:
 
 - autocompletion
 - syntax-highlighting
@@ -14,12 +14,14 @@ This is my basic config for working in shell with minimal aliases, and plugins, 
 ## Setup
 
 - Clone this repo to `~/.config/zsh`
-- Get all plugins locally (fzf via brew, rest can be via git clone)
+- Get all plugins locally
 - Set source in `~/.zshrc` to `source ~/.config/zsh`
 
 ## Plugins
 
-To install plugins, they need to be pulled locally first, and then extended in `~/.config/.zshrc` plugins
+Official plugins can be found [here](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins), to install them just extend the `plugins` property in `~/.config/.zshrc`
+
+To install custom plugins, they need to be pulled locally first to the $ZSH_CUSTOM/plugins directory, and then extended in `~/.config/.zshrc` plugins
 
 ### Example install
 
@@ -31,7 +33,7 @@ git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugi
 
 ### Plugins list
 
-- fzf - can be installed via `brew` `brew install fzf`
+- fzf
 - (zsh-syntax-highlighting)[https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting]
 - (zsh-autosuggestions)[https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions]
 - (zsh-fast-syntax-highlighting)[https://github.com/zdharma-continuum/fast-syntax-highlighting.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/fast-syntax-highlighting]
