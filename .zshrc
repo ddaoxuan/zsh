@@ -102,7 +102,8 @@ source $ZSH/oh-my-zsh.sh
 #
 #
 # Bindings
-#
+bindkey -s '^s' 'tmux-sessionizer\n'
+
 # Jump words backwards forward in fish/bash like style
 bindkey "^[[1;3C" forward-word
 bindkey "^[[1;3D" backward-word
