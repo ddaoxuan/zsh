@@ -1,7 +1,6 @@
 # oh-my-zsh core
 export ZSH="$HOME/.oh-my-zsh"
 
-
 ZSH_THEME="robbyrussell"
 DISABLE_AUTO_TITLE="true"
 
@@ -14,6 +13,7 @@ path=(
   "$HOME/.bun/bin"
   "$HOME/Library/pnpm"
   "$HOME/.local/bin"
+  "$HOME/.config/tmux/bin" # include tmux-sessionizer
   /opt/homebrew/bin
   /opt/homebrew/sbin
   $path    # include system defaults
@@ -23,7 +23,12 @@ export PATH
 
 [[ -f "$HOME/.config/zsh/.env" ]] && source "$HOME/.config/zsh/.env" # load .env
 
-# Bindings
+tmux_sessionizer_widget() { zle -I; BUFFER='tmux-sessionizer'; zle accept-line; }
+
+zle -N tmux_sessionizer_widget
+bindkey $'\es' tmux_sessionizer_widget
+bindkey -M viins $'\es' tmux_sessionizer_widget
+bindkey -M vicmd $'\es' tmux_sessionizer_widget
 
 # Jump words backwards forward in fish/bash like style
 bindkey "^[[1;3C" forward-word
@@ -46,7 +51,7 @@ alias yeet="git add . && git commit -m 'wip' -n && git push --no-verify"
 # Run tmux on startup
 # if [ "$TMUX" = "" ]; then tmux; fi -- use it with terminal emulator only, in cursor it causes mess to show upon terminal start due to preinit functions
 
-source ~/fzf-git.sh/fzf-git.sh
+source ~/.config/zsh/fzf-git.sh
 
 # load autocomplete
 autoload -Uz compinit
